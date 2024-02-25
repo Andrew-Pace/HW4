@@ -79,7 +79,7 @@ def plotter(args, prob, xaxisvalues, GT=True):
     ax2.legend()  # show legend
 
     # labels for subplot2
-    ax2.set_ylabel("CDF Formula", fontsize=8, color='k') # need to add cdf formula as label
+    ax2.set_ylabel("CDF Formula", fontsize=8, color='k')
 
     plt.show()
 
@@ -108,8 +108,8 @@ def main():
     plotter(args, cdfprob, xaxisvalues, GT=isGT)  # call function for problem a1 graph 1
 
 
-    # PROBLEM a1
-    # defining variables for problem a1
+    # PROBLEM a2
+    # defining variables for problem a2
     mean = 175
     standard_deviation = 3
     testx = mean + 2 * standard_deviation  # x value to test
@@ -128,7 +128,7 @@ def main():
     prob = round(probcalc(height_distribution, testx)[0], 3)  # prob that a value = testx
     cdfprob = round(probcalc(height_distribution, testx)[1],3)  # prob that a value <= testx
 
-    plotter(args, cdfprob, xaxisvalues, GT=isGT)  # call function for problem a1 graph 1
+    plotter(args, cdfprob, xaxisvalues, GT=isGT)  # call function for problem a2 graph 1
 
 
 if __name__ == "__main__":
