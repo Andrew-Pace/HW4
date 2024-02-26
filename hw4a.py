@@ -91,7 +91,7 @@ def plotter(args, prob, xaxisvalues, GT=True):
 # region Main
 
 def main():
-
+ """
     # PROBLEM a1 (Copied from HW4-SP24.docx)
     # Using the scipy stats module:
     # P(x<1|N(0,1)): probability x<1 given a normal distribution of x with μ=0, σ=1
@@ -103,6 +103,7 @@ def main():
     # Rather than printing your findings to the console, we will use matplotlib.pyplot to produce nicely
     # formatted, stacked plots such as shown below. Additional requirements are:
     # You should use numpy arrays for all of your work on this problem where arrays are needed
+    """
 
     mean = 0
     standard_deviation = 1
