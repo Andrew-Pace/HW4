@@ -1,8 +1,12 @@
+
+# region Import
 from scipy import stats
 import matplotlib.pyplot as plt
 import numpy as np
+ # endregion
 
 
+#region Functions
 def probcalc(height_distribution, testx):
     """Calculates the probability that value is equal to testx, and that a value is equal to or below ttestx
     :param height_distribution: height_distribution = stats.norm(loc=mean, scale=standard_deviation)
@@ -82,12 +86,24 @@ def plotter(args, prob, xaxisvalues, GT=True):
     ax2.set_ylabel("CDF Formula", fontsize=8, color='k')
 
     plt.show()
+# endregion
 
+# region Main
 
 def main():
 
-    # PROBLEM a1
-    # defining variables for problem a1
+    # PROBLEM a1 (Copied from HW4-SP24.docx)
+    # Using the scipy stats module:
+    # P(x<1|N(0,1)): probability x<1 given a normal distribution of x with μ=0, σ=1
+    # P(x>μ+2σ|N(175, 3)
+    #--
+    #Specifically, you should import as: from scipy import stats
+    # Within stats you should explore the functions stats.norm().pdf and stats.norm().cdf , which
+    # refer to the probability density function and cumulative distribution functions, respectively.
+    # Rather than printing your findings to the console, we will use matplotlib.pyplot to produce nicely
+    # formatted, stacked plots such as shown below. Additional requirements are:
+    # You should use numpy arrays for all of your work on this problem where arrays are needed
+
     mean = 0
     standard_deviation = 1
     testx = 1  # x value to test
@@ -129,7 +145,7 @@ def main():
     cdfprob = round(probcalc(height_distribution, testx)[1],3)  # prob that a value <= testx
 
     plotter(args, cdfprob, xaxisvalues, GT=isGT)  # call function for problem a2 graph 1
-
+# endregion
 
 if __name__ == "__main__":
     main()
