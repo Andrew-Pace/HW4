@@ -104,6 +104,7 @@ def print_system(a, b, x):
 def main():
     """
     Solves the system of equations, has options for 2x2-5x5 matrices
+    Imported archived function, prompted for a cleaner system for larger matrices, verified solutions
     :return: Prints the solutions to the CLI
     """
     # Example usage for a 3x3 matrix
