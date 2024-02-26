@@ -1,11 +1,13 @@
 
+# region Import
 import numpy as np
 from scipy.optimize import fsolve
+# endregion
 
-
+# region Functions
 def func(x):
     """
-        defines Function #1
+        defines Function #1  -- x-3cos(x)=0
     :param x: x value to be evaluated
     :return: Function 1 evaluated at x
     """
@@ -15,7 +17,7 @@ def func(x):
 
 def func2(x):
     """
-    defines Function #2
+    defines Function #2  - cos(2x) * x^3=0
     :param x: x value to be evaluated
     :return: Function 2 evaluated at x
     """
@@ -44,10 +46,15 @@ def solver(arr, fcn):
     newroots = np.unique(np.round(roots, 3))  # round and strip the duplicates of the roots
 
     return newroots
+# endregion
 
+# region Main
 
 def main():
     """
+    Hw4 question b
+    "Find the roots of the following equations using fsolve from scipy.optimize. Do these functions
+    intersect? If so, where?"
     Main function, finds roots and intersects of 2 equations
     :return: prints results to the CLI
     """
@@ -74,8 +81,7 @@ def main():
     for i in range(newresult.size):  # prints the intersects nicely
         print(f"x={newresult[i]}")
     pass
-
-
+# endregion
 
 if __name__ == '__main__':
     main()

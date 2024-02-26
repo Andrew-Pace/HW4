@@ -1,6 +1,6 @@
 import numpy as np
 
-
+# region Solver
 def solver(a, b):
     """
     Solves the system of equations given by a and b in the form of matrices
@@ -10,7 +10,9 @@ def solver(a, b):
     """
     results = np.linalg.solve(a, b)  # using numpy function to solve system
     return results
+# endregion
 
+# region Main
 
 def main():
     """
@@ -70,6 +72,7 @@ def main():
             print(f"x{i + 1}={xfive[i]}")
         print()  # space for prettiness
 
+# endregion
 
 if __name__ == '__main__':
     main()
